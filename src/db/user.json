@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Renato Scarante",
+    "email": "renato@scarante.com",
+    "cpf": "034.070.059-97",
+    "password": "teste",
+    "active": true,
+    "createdAt": "2020-05-01",
+    "updatedAt": "2020-05-01",
+    "lastLogin": ""
+  }
+]
