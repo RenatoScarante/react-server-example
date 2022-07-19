@@ -93,6 +93,25 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
   }
 });
 
+// GET /api/user/:id
+server.get(process.env.ROUTE_USER_GET, (req, res) => {
+  var id = req.params.id;
+
+  var user = db
+    .get("user")
+    .getById(id)
+    .value();
+
+  if (user === undefined) {
+    const status = 401;
+    const message = "User not exists";
+    res.status(status).json({ status, message });
+    return;
+  }
+
+  res.status(200).json({ user: user });
+});
+
 server.use("/api", router);
 
 const port = process.env.PORT ? process.env.PORT : 5000;

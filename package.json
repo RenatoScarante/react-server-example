@@ -1,14 +1,14 @@
 {
-  "name": "react-server-example",
-  "version": "1.0.0", 
-  "description": "React server example",
-  "main": "index.js",
+  "name": "LetMeFriends",
+  "version": "1.0.0",
+  "description": "LetMeFriends",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "dev-auth": "nodemon src/index.js",
+    "dev": "nodemon src/server.js",
+    "dev-auth": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "json-server --watch ./db.json",
-    "start-auth": "node src/index.js"
+    "start-auth": "node src/server.js"
   },
   "repository": {
     "type": "git",
